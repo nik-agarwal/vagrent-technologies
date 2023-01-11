@@ -1,0 +1,81 @@
+#include <iostream>
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    
+    map<string,map<string,int>> table;
+   
+    table.insert(make_pair("Moday",map<string,int>()));
+        table["Monday"].insert(make_pair("TOI",3));
+        table["Monday"].insert(make_pair("Hindu",2.5));
+        table["Monday"].insert(make_pair("ET",4));
+        table["Monday"].insert(make_pair("BM",1.5));
+        table["Monday"].insert(make_pair("HT",2));
+        
+    table.insert(make_pair("Tuesday",map<string,int>()));
+        table["Tuesday"].insert(make_pair("TOI",3));
+        table["Tuesday"].insert(make_pair("Hindu",2.5));
+        table["Tuesday"].insert(make_pair("ET",4));
+        table["Tuesday"].insert(make_pair("BM",1.5));
+        table["Tuesday"].insert(make_pair("HT",2));
+        
+    table.insert(make_pair("Wednesday",map<string,int>()));
+        table["Wednesday"].insert(make_pair("TOI",3));
+        table["Wednesday"].insert(make_pair("Hindu",2.5));
+        table["Wednesday"].insert(make_pair("ET",4));
+        table["Wednesday"].insert(make_pair("BM",1.5));
+        table["Wednesday"].insert(make_pair("HT",2));
+        
+    table.insert(make_pair("Thursday",map<string,int>()));
+        table["Thursday"].insert(make_pair("TOI",3));
+        table["Thursday"].insert(make_pair("Hindu",2.5));
+        table["Thursday"].insert(make_pair("ET",4));
+        table["Thursday"].insert(make_pair("BM",1.5));
+        table["Thursday"].insert(make_pair("HT",2));
+        
+    table.insert(make_pair("Friday",map<string,int>()));
+        table["Friday"].insert(make_pair("TOI",3));
+        table["Friday"].insert(make_pair("Hindu",2.5));
+        table["Friday"].insert(make_pair("ET",4));
+        table["Friday"].insert(make_pair("BM",1.5));
+        table["Friday"].insert(make_pair("HT",2));
+        
+    table.insert(make_pair("Saturday",map<string,int>()));
+        table["Saturday"].insert(make_pair("TOI",5));
+        table["Saturday"].insert(make_pair("Hindu",4));
+        table["Saturday"].insert(make_pair("ET",4));
+        table["Saturday"].insert(make_pair("BM",1.5));
+        table["Saturday"].insert(make_pair("HT",4));
+        
+    table.insert(make_pair("Sunday",map<string,int>()));
+        table["Sunday"].insert(make_pair("TOI",6));
+        table["Sunday"].insert(make_pair("Hindu",4));
+        table["Sunday"].insert(make_pair("ET",10));
+        table["Sunday"].insert(make_pair("BM",1.5));
+        table["Sunday"].insert(make_pair("HT",4));    
+
+      map<string,int> total;
+      total.insert(make_pair("TOI",26));
+      total.insert(make_pair("Hindu",20.5));
+      total.insert(make_pair("ET",34));
+      total.insert(make_pair("BM",10.5));
+      total.insert(make_pair("HT",18));
+      
+      float input;
+      cin>>input;
+      
+      
+    float ttl[5] = {26,20.5,34,10.5,18};
+    string newspaper[5] = {"TOI","Hindu","ET", "BM","HT"};
+    for(int i=0;i<4;++i){
+        for(int j=i+1;i<=4;++j){
+            if((ttl[i]+ttl[j])<=input){
+                cout<<"["<<newspaper[i]<<","<<newspaper[j]<<"]";
+                continue;
+            }
+        }
+   }
+    return 0;
+}
